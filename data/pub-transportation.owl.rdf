@@ -1,0 +1,745 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#"
+     xml:base="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:pub-transportation="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#ArrivesatTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#ArrivesatTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+        <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#DepartatTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#DepartatTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+        <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Departfrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Departfrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Goto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Goto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#commutewith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#commutewith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#pollution_level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#pollution_level">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Cloudy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Rainy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Snowy"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Sunny"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#bus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Cloudy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Cloudy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Meteo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#bus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Meteo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Meteo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#bus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Rainy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Rainy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Meteo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Snowy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Snowy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Meteo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Sunny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Sunny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Meteo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#marche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#marche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#motocycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#motocycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#rer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#rer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#trottinette -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#trottinette">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#voiture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#voiture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#vélo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#vélo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DayOfWeek">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TRS -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TRS">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalDuration -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalDuration">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalPosition -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalPosition">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TimeZone -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TimeZone">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#generalYear -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#generalYear">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#rer"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Alexis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Alexis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#rer"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Bird -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Bird">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#trottinette"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">106</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Bolt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Bolt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#trottinette"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">106</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#C -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#rer"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Captain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Captain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxi"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#CharlesDeGaulle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#CharlesDeGaulle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#rer"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#rer"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Heetch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Heetch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxi"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#LIMES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#LIMES">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#trottinette"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">106</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Marie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Marie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Olaf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Olaf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Roissy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Roissy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Tier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Tier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#trottinette"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">104</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#TourEiffel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#TourEiffel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Uber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Uber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxi"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Vélib -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Vélib">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#vélo"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#big_car -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#big_car">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#voiture"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">250</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#motobike -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#motobike">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#motocycle"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">72</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#personnel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#personnel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#vélo"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#run -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#run">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#marche"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#small_car -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#small_car">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#voiture"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">170</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxiparisien -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxiparisien">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxi"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#walk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#walk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#marche"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#46">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#bus"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">68</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+        <pollution_level rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</pollution_level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Meteo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#bus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#marche"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#metro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#rer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#taxi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#trottinette"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#voiture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#vélo"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
