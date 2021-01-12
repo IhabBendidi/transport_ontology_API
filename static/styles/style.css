@@ -1,3 +1,4 @@
+
 /*-----------------------------------------------------------------------------------
 
     Template Name: Smash - Bootstrap Template
@@ -2534,11 +2535,11 @@ p {
 
 .single-features {
   padding: 40px 20px 52px;
-  background-color: #90142d; }
+  background-color: #fff; }
   .single-features .features-title-icon .features-title a {
     font-size: 36px;
     line-height: 45px;
-    color: #90142d;
+    color: #fff;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
