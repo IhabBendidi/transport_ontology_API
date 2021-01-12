@@ -27,7 +27,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#ArrivesatTime">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
         <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
     </owl:ObjectProperty>
@@ -39,7 +38,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#DepartatTime">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
         <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/icity/Time/TimeOntologyThing"/>
     </owl:ObjectProperty>
@@ -51,7 +49,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Departfrom">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
     </owl:ObjectProperty>
@@ -63,7 +60,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Goto">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
     </owl:ObjectProperty>
@@ -75,7 +71,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#commutewith">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#moyen_transports"/>
     </owl:ObjectProperty>
@@ -130,6 +125,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Cloudy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Cloudy">
@@ -163,6 +166,14 @@
     <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Places -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Places">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+    </owl:Class>
     
 
 
@@ -571,10 +582,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Cergy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Cergy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#CharlesDeGaulle -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#CharlesDeGaulle">
-        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Places"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Créteil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Créteil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City"/>
     </owl:NamedIndividual>
     
 
@@ -627,6 +654,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Marne-La-Vallé -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Marne-La-Vallé">
+        <rdf:type rdf:resource="http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Massy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Massy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Olaf -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Olaf">
@@ -637,10 +680,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Rambouillet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Rambouillet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Roissy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Roissy">
-        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Places"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Saint-Denis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Saint-Denis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/benj/ontologies/2019/11/untitled-ontology-7#City"/>
     </owl:NamedIndividual>
     
 
@@ -657,7 +724,7 @@
     <!-- http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#TourEiffel -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#TourEiffel">
-        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#Places"/>
     </owl:NamedIndividual>
     
 

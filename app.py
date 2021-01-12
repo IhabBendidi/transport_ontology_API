@@ -1,11 +1,20 @@
 import flask
 import rdflib
 from flask import request
-from flask import render_template
+from flask import render_template, redirect, url_for
+import wikipedia
+from forms import SearchForm
+from flask_wtf.csrf import CSRFProtect, CSRFError
+
+import os
+SECRET_KEY = os.urandom(32)
 
 app = flask.Flask(__name__)
+app.config['SECRET_KEY'] = SECRET_KEY
 app.config['UPLOAD_FOLDER'] = "data"
 app.config["DEBUG"] = True
+
+csrf = CSRFProtect(app)
 
 g = rdflib.Graph()
 
@@ -85,6 +94,23 @@ def day_statistics():
     return {"code":code,"response":stat}
 
 
+
+@app.route('/api/get_details', methods=['GET'])
+def get_location():
+    location = request.args.get('location')
+    source = None
+    if location == '':
+        code = 404
+        response = None
+    else :
+        code = 200
+        try :
+            response = wikipedia.summary("eiffel tower")
+            source = "wikipedia"
+        except :
+            code = 503
+            response = None
+    return {"code":code,"response":response,"source":source}
 
 
 @app.route('/api/pollution', methods=['GET'])
@@ -215,12 +241,32 @@ def individu_transports(individu):
     return {"code":code,"response":transports}
 
 
-@app.route('/', methods = ['GET'])
+
+def get_location(location):
+    source = None
+    if location == '':
+        code = 404
+        response = None
+    else :
+        code = 200
+        try :
+            response = wikipedia.summary("eiffel tower")
+            source = "wikipedia"
+        except :
+            code = 503
+            response = None
+    return {"code":code,"response":response,"source":source}
+
+
+@app.route('/', methods = ['GET', 'POST'])
 def home_page():
+    form = SearchForm()
+    if request.method == 'POST' and form.validate_on_submit():
+        return redirect((url_for('search_results', query=form.search.data)))
     output = moyen_transports()
     individus = ['Olaf','Marie','Alexis']
     if output['code'] == 200:
-        return render_template('index.html' , transports = output["response"],individus = individus)
+        return render_template('index.html' , transports = output["response"],individus = individus,form=form)
     elif output['code'] == 404:
         return render_template('404.html')
     else:
@@ -252,4 +298,13 @@ def template_individu(individu):
     return render_template('template_individus.html' ,transports = transports , individu = individu)
 
 
+@app.route('/search_results/<query>')
+def search_results(query):
+  output = get_location(query)
+  source = output['source']
+  content = output['response']
+  return render_template('search_results.html', query=query, content=content,source=source)
+
+
 app.run() #host= '0.0.0.0')
+#app.run(threaded=True, port=5000)

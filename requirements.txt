@@ -1,2 +1,9 @@
 flask
 rdflib
+Jinja2
+Werkzeug
+Click
+gunicorn
+MarkupSafe
+wikipedia
+Flask-WTF
