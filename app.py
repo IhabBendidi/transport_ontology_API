@@ -7,7 +7,8 @@ from forms import SearchForm
 from flask_wtf.csrf import CSRFProtect, CSRFError
 
 import os
-SECRET_KEY = os.urandom(32)
+SECRET_KEY = b'\x9aN\xa0\xedp\xff\x07 \xa4$\xbdn\x02\x1f\xce\x1c\xca,wBX\xd6F\xf3\x08?,/\xaf"\x0f5'
+
 
 app = flask.Flask(__name__)
 app.config['SECRET_KEY'] = SECRET_KEY
@@ -305,6 +306,6 @@ def search_results(query):
   content = output['response']
   return render_template('search_results.html', query=query, content=content,source=source)
 
-
-#app.run() #host= '0.0.0.0')
+if __name__ == "__main__":
+    app.run() #host= '0.0.0.0')
 #app.run(threaded=True, port=5000)
