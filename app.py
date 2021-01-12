@@ -186,7 +186,9 @@ def day_statistics(moyen):
             stat = len(list(qres))
             if stat == 0 :
                 response = []
-                response.append({"moyen":moyen,"statistic":stat})
+                moyen_initial = moyen
+                stat_initial = stat
+                #response.append({"moyen":moyen,"statistic":stat})
                 qres = g.query("""PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
                             PREFIX owl: <http://www.w3.org/2002/07/owl#>
                             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -210,12 +212,18 @@ def day_statistics(moyen):
                                                 ?personne xd:commutewith xd:""" + moyen + """.
                                     }""")
                     stat = len(list(qres))
+                    stat_initial += stat
+
                     response.append({"moyen":moyen,"statistic":stat})
+                response_final = []
+                response_final.append({"moyen":moyen_initial,"statistic":stat_initial})
+                for r in response:
+                    response_final.append(r)
 
         except :
             code = 503
             response = None
-    return {"code":code,"response":response}
+    return {"code":code,"response":response_final}
 
 
 
