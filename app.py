@@ -105,7 +105,7 @@ def get_location():
     else :
         code = 200
         try :
-            response = wikipedia.summary("eiffel tower")
+            response = wikipedia.summary(location)
             source = "wikipedia"
         except :
             code = 503
@@ -250,7 +250,7 @@ def get_location(location):
     else :
         code = 200
         try :
-            response = wikipedia.summary("eiffel tower")
+            response = wikipedia.summary(location)
             source = "wikipedia"
         except :
             code = 503
@@ -306,5 +306,5 @@ def search_results(query):
   return render_template('search_results.html', query=query, content=content,source=source)
 
 
-#app.run() #host= '0.0.0.0')
+app.run() #host= '0.0.0.0')
 #app.run(threaded=True, port=5000)
