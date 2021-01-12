@@ -306,5 +306,5 @@ def search_results(query):
   return render_template('search_results.html', query=query, content=content,source=source)
 
 
-app.run() #host= '0.0.0.0')
-#app.run(threaded=True, port=5000)
+#app.run() #host= '0.0.0.0')
+app.run(threaded=True, port=5000)
