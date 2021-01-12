@@ -26,7 +26,7 @@ def moyen_transports():
 
 
 @app.route('/api/individu_transports', methods=['GET'])
-def marie_transports():
+def individu_transports():
     individu = request.args.get('individu')
     if individu == '':
         return {"data":'Please input the correct name of a person'}
@@ -39,11 +39,24 @@ def marie_transports():
         SELECT ?object
             WHERE { xd:""" + individu + """ xd:commutewith ?object}""")
     transports = [x[0].n3().split("#")[1].split('>')[0] for x in list(qres)]
-    print(transports)
-    #for transport in transports :
+    #TODO : GET DATA OF EACH TRANSPORT
+    return {"data":transports}
 
-    #transports = [x[0].n3().split("#")[1].split('>')[0] for x in list(qres)]
-    return {"data":transports} #transports}
+@app.route('/api/statistics', methods=['GET'])
+def day_statistics():
+    qres = g.query("""PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                    PREFIX xd: <http://www.semanticweb.org/clementsiegrist/ontologies/2021/0/pub-transportation#>
+
+                    SELECT ?personne
+                    WHERE {
+                                ?personne rdf:type xd:Person.
+                                ?personne xd:commutewith xd:Uber.
+                    }""")
+    # TODO : Add filter about days
+    return {"data":len(list(qres))}
 
 
 
