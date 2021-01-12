@@ -1,9 +1,3 @@
-curl -X GET 'http://127.0.0.1:5000/api/moyen_transports'
-curl -X GET 'http://127.0.0.1:5000/api/individu_transports?individu=Alexis'
-curl -X GET 'http://127.0.0.1:5000/api/statistics?moyen=Uber'
-curl -X GET 'http://127.0.0.1:5000/api/pollution?moyen=bus'
-curl -X GET 'http://127.0.0.1:5000/api/get_details?location=eiffel+tower'
-
 # Public Transport Ontology Project
 
 ### Installation :
