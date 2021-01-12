@@ -879,10 +879,10 @@
 /* Background Color */
 
 .gray-bg {
-	background: #90142d;
+	background: #fff;
 }
 .white-bg {
-	background: #90142d;
+	background: #fff;
 }
 .black-bg {
 	background: #222;
@@ -890,7 +890,7 @@
 /* Color */
 
 .white {
-	color: #90142d;
+	color: #fff;
 }
 .black {
 	color: #222;
